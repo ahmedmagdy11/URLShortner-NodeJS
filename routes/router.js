@@ -13,4 +13,16 @@ router.post('/',async(req,res)=>{
     res.render('index.ejs',{shortUrl:query})
 })
 
+router.get('/:url',async(req,res)=>{
+   
+    const query = await urls.findOne({GeneratedUrl:req.params.url}) 
+  
+   if (query==null) {
+        res.sendStatus(404)
+   }
+   else { 
+    res.redirect(query.fullUrl)
+}
+})
+
 module.exports=router

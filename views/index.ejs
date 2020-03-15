@@ -14,11 +14,12 @@
             <input type="url" name="FullUrl" placeholder="URL" id="FullUrl" class="form-control mr-2 ">
             <button type="submit" class="btn btn-success">shrink</button>
         </form>
+       
         <% if (shortUrl){ %>
             <a href=<%=shortUrl.fullUrl %>> <%=shortUrl.fullUrl %></a>
-            <a href=<%=shortUrl.GeneratedUrl %>> <%=shortUrl.GeneratedUrl %></a>
+            <a href=<%=shortUrl.GeneratedUrl %>> <%= 'mydomain.com/'+shortUrl.GeneratedUrl %></a>
             <% }%>
-      
+        
     </div>
 </body>
 </html>
