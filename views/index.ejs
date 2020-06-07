@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>URL Shrinker</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body style="background-color: black;">
     <div class="container">
-        <h1>URL Shrinker </h1>
-         <form action="" method="POST" class="my-4 form-inline">
-            
-            <input type="url" name="FullUrl" placeholder="URL" id="FullUrl" class="form-control mr-2 ">
-            <button type="submit" class="btn btn-success">shrink</button>
-        </form>
-       
+      <h1 style="    color:crimson; font-family: 'Raleway',sans-serif; 
+      font-size: 55px; font-weight: 500; line-height: 72px; margin: 0 0 24px;
+       text-align: center; text-transform: uppercase; position: absolute; top: 30% ;left: 35%;;">URL Shrinker</h1>
+      <form action="" method="POST" style="align-content: center; width:800px; top: 40%; left: 35%; position: absolute; margin:0 auto;">
+        <input
+          type="url"
+          name="FullUrl"
+          placeholder="URL"
+          class="form-control mr-2"
+          required
+          style="width: 410px; height: 50px;"
+        />
+        <button type="submit" class="btn btn-success" style="width: 150px; height: 50px; position: absolute; top: 110%;">shrink</button>
+    
+      
+      </form>
+      <div style="background-color:white; position: absolute; top: 60%; left: 35%;">
         <% if (shortUrl){ %>
-            <a href=<%=shortUrl.fullUrl %>> <%=shortUrl.fullUrl %></a>
-            <a href=<%=shortUrl.GeneratedUrl %>> <%= 'mydomain.com/'+shortUrl.GeneratedUrl %></a>
-            <% }%>
-        
+          
+                <a style="font-size:30px ; font-family: sans-serif;"  href=<%=shortUrl.GeneratedUrl %>> <%= 'mydomain.com/'+shortUrl.GeneratedUrl %></a>
+                <% }%>
+            
+            
+           
+    
     </div>
-</body>
+
+     
+    </div>
+  </body>
 </html>
